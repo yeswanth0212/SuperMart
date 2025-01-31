@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <h1 class="super-mart">Super Mart</h1>
+    </div>
+    <nav>
+        <input type="text" id="search-bar" placeholder="Search for products..." oninput="searchProducts()">
+        <a href="javascript:void(0);" onclick="showCart()">Cart <i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a>
+        <a href="/login"><i class="fas fa-user"></i> Login</a>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section class="product-section">
+        <h2>Featured Products</h2>
+        <div id="product-list" class="product-list"></div>
+    </section>
+
+    <!-- Cart Section (Initially Hidden) -->
+    <section id="cart-section" class="cart-section" style="display:none;">
+        <h2>Your Cart</h2>
+        <div id="cart-list" class="cart-list"></div>
+        <div id="cart-total-price" class="cart-total-price"></div>
+        <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+        <button onclick="closeCart()">Close Cart</button>
+    </section>
+</main>
+
+<!-- Success Popup Message -->
+<div id="success-popup" class="success-popup">
+    <p>Product added to cart successfully!</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Super Mart | All rights reserved</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

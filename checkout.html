@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Super Mart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <h1 class="super-mart">Super Mart</h1>
+    </div>
+    <nav>
+        <a href="/login"><i class="fas fa-user"></i> Login</a>
+    </nav>
+</header>
+
+<!-- Checkout Section -->
+<main>
+    <section class="checkout-section">
+        <h2>Delivery Information</h2>
+        
+        <!-- Checkout Form -->
+        <form id="checkout-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            <h3><input type="hidden" id="total-amount" name="totalAmount">
+    <div id="total-display"></div></h3>
+            
+            
+            <button type="submit">Confirm Order</button>
+        </form>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Super Mart | All rights reserved</p>
+</footer>
+
+<script src="checkout.js"></script>
+</body>
+</html>
